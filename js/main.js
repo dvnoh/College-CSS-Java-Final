@@ -34,8 +34,49 @@ console.log(filteredItems);
 
 // Step 7: Create an event listener that fires a callback function when the call to action button in the header is clicked. It should alert "Call me now at 555-555-55555";
 
+/*
 const callNowButton = document.getElementById('call-now');
 callNowButton.addEventListener('click', function() {
   alert('Call me now at 555-555-5555');
 });
+*/
+
+// Bonus Challenge Modal:
+
+// Get the modal
+var modal = document.getElementById("call-modal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("call-now");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+  setTimeout(function() {
+    modal.style.opacity = "1";
+  }, 10); // Add a small delay to let the DOM update before applying the opacity transition
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.opacity = "0"; // Set opacity to 0 to trigger the fade out transition
+  setTimeout(function() {
+    modal.style.display = "none";
+  }, 300); // Wait for the transition to complete before hiding the modal
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.opacity = "0"; // Set opacity to 0 to trigger the fade out transition
+    setTimeout(function() {
+      modal.style.display = "none";
+    }, 300); // Wait for the transition to complete before hiding the modal
+  }
+}
+
+
 
