@@ -151,6 +151,8 @@ body {
   background-color: white;
 }
 
+/* MAIN */
+
 main {
   width: calc(100% - 30%);
   float: right;
@@ -358,11 +360,11 @@ footer p {
   opacity: 90%;
   color: white;
   background-color: #2e2d2d;
-  margin: 0 auto; /* Center horizontally */
+  margin: 0 auto;
   padding: 20px;
-  width: 80%; /* Could be more or less, depending on screen size */
-  max-width: 600px; /* Set a max width */
-  border-radius: 10px; /* Add some rounded corners */
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
 }
 
 .modal-content a {
